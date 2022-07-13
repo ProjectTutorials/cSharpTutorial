@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>C-Sharp Tutorial</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <!-- Online Content -->
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/76637730?v=4">
+  <link rel="stylesheet" href="https://app.staticsave.com/root/root.css">
+  <link rel="stylesheet" href="https://app.staticsave.com/root/noselect.css">
+  <!-- <link rel="stylesheet" href="https://app.staticsave.com/root/tutorial.css"> -->
+  
+  <!-- CSS only -->
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="noSelect">
+
+<nav id='customNav' class='navbar navbar-expand-sm bg-light fixed-top'>
+  <div class='container-fluid'>
+    <ul class='navbar-nav justify-content-start'>
+      <li>
+        <a>
+          <img
+            alt='a'
+            id='hrtLogo'
+            src='https://avatars.githubusercontent.com/u/76637730?v=4'
+            draggable='false'
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div id="progressBar"></div>
+
+<h1 class="Heading">Get Started</h1>
+<div class="mainSection">
+  <div class="subSection bg-white" data-bs-toggle="modal" data-bs-target="#myModal1">
+    <h1>Dependancies</h1>
+    <p>VS 2022</p>
+    <p>SQL Server</p>
+    <p>SSMS</p>
+    <p>VS Code</p>
+  </div>
+
+    <!-- The Modal -->
+    <div class="modal fade" tabindex="-1" id="myModal1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1>Dependancies</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary rounded-pill iPop">Visual Studio Community Edition 2022 <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br><br>
+            <a href="https://www.microsoft.com/en-in/sql-server/sql-server-downloads#:~:text=Download%20now-,Express,-SQL%20Server%202019" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary rounded-pill iPop">SQL Server Express <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br><br>
+            <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16#download-ssms:~:text=Free%20Download%20for%20SQL%20Server%20Management%20Studio%20(SSMS)%2018.12.1" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary rounded-pill iPop">SSMS <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br><br>
+            <a href="https://code.visualstudio.com/docs/?dv=win" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary rounded-pill iPop">VS Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark rounded-pill" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<h1 class="Heading pushDown">Razor WebApp VS MVC</h1>
+<div class="mainSection">
+
+  <div class="subSection">
+    <h1>MVC (This)</h1>
+
+    <code onclick="copy(this)" style="margin: 0px;">dotnet new mvc -o Mvc</code><br>
+
+    <p>Lightweight</p>
+    <p>Separate Folders- <imp>Models</imp>, <imp>View</imp> & <imp>Controller</imp></p>
+    <p>Like-<imp>React</imp></p>
+  </div>
+
+  <div class="subSection">
+    <h1>Razor WebApp</h1>
+
+    <code onclick="copy(this)" style="margin: 0px;">dotnet new webapp -o RazorPages</code><br>
+
+    <p>Extremely Lightweight</p>
+    <p>Single Folder- <imp>Pages</imp></p>
+    <p>Like- <imp>HTML Page</imp></p>
+  </div>
+
+</div>
+
+
+<h1 class="Heading pushDown">Start with MVC CRUD App</h1>
+<div class="mainSection">
+
+  <div class="subSection codeSection">
+    <h1>1. Create a web app</h1>
+    <code onclick="copy(this)">dotnet new mvc -o MVCwebApp</code><br>
+    <code onclick="copy(this)">code -r MVCwebApp</code>
+  </div>
+  
+  <div class="subSection codeSection">
+    <h1>2. Create Model</h1>
+    <code onclick="copy(this)">dotnet new mvc -o MVCwebApp</code><br>
+    <imp>Models/Movie.cs</imp>
+    <div class="codeSnippet">
+      <script src="https://gist.github.com/pratikkabade/b4b5601aabf2991559528d0d21c93fd1.js"></script>
+    </div>
+  </div>
+  
+  <div class="subSection codeSection">
+    <h1>3. Reinstall Features</h1>
+    <code onclick="copy(this)">dotnet tool uninstall --global dotnet-aspnet-codegenerator</code><br>
+    <code onclick="copy(this)">dotnet tool install --global dotnet-aspnet-codegenerator</code><br>
+    <code onclick="copy(this)">dotnet tool uninstall --global dotnet-ef
+    </code><br>
+    <code onclick="copy(this)">dotnet tool install --global dotnet-ef</code>
+  </div>
+
+  <div class="subSection codeSection">
+    <h1>4. Add NuGet packages</h1>
+    <code onclick="copy(this)">dotnet add package Microsoft.EntityFrameworkCore.Design
+    </code><br>
+    <code onclick="copy(this)">dotnet add package Microsoft.EntityFrameworkCore.SQLite
+    </code><br>
+    <code onclick="copy(this)">dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+    </code><br>
+    <code onclick="copy(this)">dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+    </code>
+  </div>
+
+  <div class="subSection codeSection">
+    <h1>5. Scaffold movie pages</h1>
+    <code onclick="copy(this)" style="margin: 0px;">
+      dotnet-aspnet-codegenerator controller 
+      -name MoviesController <br><br>
+      -m Movie <br><br>
+      -dc MvcMovieContext <br><br>
+      --relativeFolderPath Controllers <br><br>
+      --useDefaultLayout <br><br>
+      --referenceScriptLibraries <br><br>
+      -sqlite
+    </code>
+  </div>
+
+  <div class="subSection codeSection">
+    <h1>6. SQLite & SQL Server Config</h1>
+    <code onclick="copy(this)">Program.cs</code>
+    <div class="codeSnippet">
+      <script src="https://gist.github.com/pratikkabade/3a857b10b3fff7c5938b51f2dadf5e1e.js"></script>
+    </div>
+  </div>
+
+  <div class="subSection codeSection">
+    <h1>7. Initial migration</h1>
+    <code onclick="copy(this)">dotnet tool install --global dotnet-ef</code>
+  </div>
+
+  <div class="subSection codeSection">
+    <h1>8. Migration</h1>
+    <code onclick="copy(this)">dotnet ef migrations add InitialCreate</code><br>
+    <code onclick="copy(this)">dotnet ef database update</code>
+  </div>
+
+  <div class="subSection codeSection">
+    <h1>9. Dependency injection</h1>
+    <imp>Program.cs</imp><br>
+    <textarea type="text" ReadOnly = true  rows="6">
+      builder.Services.AddDbContext<MvcMovieContext>(options =>
+      options.UseSqlite(builder.Configuration.GetConnectionString("MvcMovieContext")));
+    </textarea>
+  </div>
+
+</div>
+
+</body>
+
+<script src="./src/app.js"></script>
+<script src="https://app.staticsave.com/root/my-scripts.js"></script>
+
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- awesomeFonts -->
+<script src="https://kit.fontawesome.com/c5266611a7.js" crossorigin="anonymous"></script>
+
+</html>
